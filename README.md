@@ -15,7 +15,8 @@ We used the following methods to identify where a model is interpolating and whe
 3) Kernel density estimation: While Convex Hull provides a binary classification(inside vs outside), KDE can help idenify holes in the descriptor space where data might be sparse even if technically inside the hull. We also calculate RMSE inside the low KDE regions and high KDE regions based on the GPR prediction that we have.
    
 4) First, we train the GPR using all the training data that we have and get the following observations:
-   <img width="547" height="470" alt="image" src="https://github.com/user-attachments/assets/be4c17c6-da84-4576-af9a-fe12eeb8c950" />
+   <img width="547" height="470" alt="image" src="https://github.com/user-attachments/assets/be4c17c6-da84-4576-af9a-fe12eeb8c950" /> <img width="536" height="451" alt="image" src="https://github.com/user-attachments/assets/c683f65a-23cd-4343-9f72-ed7532cadc5c" />
+
 
 
    
