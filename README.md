@@ -8,7 +8,14 @@ This matters because in materials problems, descriptor space is rarely sampled u
 
 # Methodology:
 We used the following methods to identify where a model is interpolating and where its extrapolating
-1) Gaussian Process regression: We train the GPR model on the data that we have, Along with every prediction, GPR provides a standard deviation to quantify uncertainity.We then measure the GPR uncertainity across the entire descriptor space. 
+1) Gaussian Process regression: We train the GPR model on the data that we have, Along with every prediction, GPR provides a standard deviation to quantify uncertainity.We then measure the GPR uncertainity across the entire descriptor space.
+   
 2) Convex Hull method: By calculating the Convex Hull of a training data, we can try to determine if the new test point is interpolation or extrapolation. We also calculate RMSE inside the hull and outside the hull based on the GPR prediction that we have.
+   
 3) Kernel density estimation: While Convex Hull provides a binary classification(inside vs outside), KDE can help idenify holes in the descriptor space where data might be sparse even if technically inside the hull. We also calculate RMSE inside the low KDE regions and high KDE regions based on the GPR prediction that we have.
+   
+4) First, we train the GPR using all the training data that we have and get the following observations:
+   <img width="547" height="470" alt="image" src="https://github.com/user-attachments/assets/be4c17c6-da84-4576-af9a-fe12eeb8c950" />
+
+
    
