@@ -17,6 +17,27 @@ We used the following methods to identify where a model is interpolating and whe
 4) First, we train the GPR using all the training data that we have and get the following observations:
    <img width="547" height="470" alt="image" src="https://github.com/user-attachments/assets/be4c17c6-da84-4576-af9a-fe12eeb8c950" /> <img width="536" height="451" alt="image" src="https://github.com/user-attachments/assets/c683f65a-23cd-4343-9f72-ed7532cadc5c" />
 
+OBSERVATION: GPR gives a smooth prediction, even at places where we dont have any training data.
+Now,lets look at the uncertainity plot:<img width="524" height="451" alt="image" src="https://github.com/user-attachments/assets/776cbbcd-d2bb-4c40-8ff4-a26d6400302b" />
+We notice that as we go away from the training data, the uncertainity increases.
+
+Convex hull was next used to draw a boundary for interpolation and extrapolation:
+<img width="553" height="470" alt="image" src="https://github.com/user-attachments/assets/a90f1f6d-c226-439b-865d-bde46a1af452" />
+Here we notice that the hole was included as an interpolation region.
+
+Next, KDE was used to
+
+
+Next we performed:Train,Validation,Test Split for Model Evaluation
+
+The earlier analyses focused primarily on understanding prediction behavior, uncertainty distribution, and interpolation versus extrapolation across the full descriptor domain.
+
+To evaluate the generalization performance of the Gaussian Process model on unseen data, the dataset was next divided into:
+
+training, validation, and test subsets
+
+
+
 
 
    
